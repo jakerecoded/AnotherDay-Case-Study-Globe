@@ -32,7 +32,7 @@
 
       .hover-text {
         position: absolute;
-        padding: 12px;
+        padding: 0px;
         border-radius: 4px;
         font-family: 'Sora', sans-serif;
         color: white;
@@ -47,6 +47,10 @@
         text-overflow: ellipsis;
         white-space: normal;
         transition: opacity 0.3s ease-in-out;
+      }
+
+      .hover-text-rightcol {
+        padding: 12px;
       }
 
       .hover-text strong {
@@ -94,7 +98,7 @@
             tooltip.innerHTML = `
             <div style="display: flex; gap: 16px; align-items: start;">
               <img src="${d.image}" alt="${d.title}" style="width: 30%; object-fit: cover;">
-              <div>
+              <div class="hover-text-rightcol">
                 <strong>${d.title}</strong>
                 ${d.location}
               </div>
@@ -130,7 +134,7 @@
         function animate() {
           frame = requestAnimationFrame(animate);
           myGlobe.controls().autoRotate = true;
-          myGlobe.controls().autoRotateSpeed = 0.5;
+          myGlobe.controls().autoRotateSpeed = 0.2;
         }
 
         animate();
