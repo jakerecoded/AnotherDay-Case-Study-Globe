@@ -36,25 +36,40 @@
         border-radius: 4px;
         font-family: 'Sora', sans-serif;
         color: white;
-        font-size: 20px;
-        pointer-events: none;
+        font-size: 14px;
+        pointer-events: auto; /* Changed from 'none' to 'auto' to allow mouse events */
         background: linear-gradient(135deg, #141414, #1c1c1c);
         white-space: nowrap;
         z-index: 1000;
         opacity: 0;
-        max-width: 35vw;
+        max-width: 20vw;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
         transition: opacity 0.3s ease-in-out;
       }
 
-      .hover-text-rightcol {
-        padding: 12px;
+      .hover-text-container {
+        display: flex;
+        height: 100%; /* This ensures the container takes full height of hover-text */
       }
 
-      .hover-text strong {
+      .hover-text-image {
+        width: 100px; /* Fixed width */
+        background-size: cover;
+        background-position: center;
+        flex-shrink: 0; /* Prevents shrinking */
+        border-radius: 4px 0 0 4px;
+      }
+
+      .hover-text-rightcol {
+        padding: 12px;
+        flex-grow: 1; /* Allows this column to grow */
+      }
+
+      .hover-text-location {
         display: block;
+        margin-top: 4px; /* Optional: adds some spacing between title and location */
       }
 
     </style>
@@ -78,16 +93,16 @@
           {
             title: 'Private prosecution against a large corporate fraudster',
             location: 'Middle East',
-            lat: 29.2985,
-            lng: 42.5510,
+            lat: 25.163,
+            lng: 55.224,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbfcbc3b7c3cd4a686d_61fa880b964cc85d77d65d50_Private-prosecution-against-a-large-corporate-fraudster-Small.jpeg',
             url: 'https://www.another-day.com/case-study/private-prosecution-against-a-large-corporate-fraudster'
           },
           {
             title: 'International investigation to locate a missing beneficiary',
             location: 'Los Angeles',
-            lat: 34.0549,
-            lng: 118.2426,
+            lat: 34.016,
+            lng: -118.250,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbe88264b213358afa5_6411d327a37710ae0ce659c4_International-investigation-to-locate-a-missing-beneficiary-Small.jpeg',
             url: 'https://www.another-day.com/case-study/international-investigation-to-locate-a-missing-beneficiary'
           },
@@ -110,16 +125,16 @@
           {
             title: 'Physical security support after a sophisticated criminal attack',
             location: 'Spain',
-            lat: 40.4637,
-            lng: 3.7492,
+            lat: 40.327,
+            lng: -4.287,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667c1e5aa12465be6278a673_Physical-security-support-after-a-sophisticated-criminal-attack-small.jpg',
             url: 'https://www.another-day.com/case-study/physical-security-support-after-a-sophisticated-criminal-attack'
           },
           {
             title: 'Corporate governance and enterprise risk assessment for clinical life sciences',
             location: 'United Kingdom',
-            lat: 55.3781,
-            lng: 3.4360,
+            lat: 54.004,
+            lng: -1.950,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbb443cd2f88486d65b_62f00cce3d1ceace6a259fe5_corporate-governance-risk-assessment-for-life-sciences-S.jpeg',
             url: 'https://www.another-day.com/case-study/corporate-governance-enterprise-risk-assessment-for-clinical-life-sciences'
           },
@@ -134,16 +149,16 @@
           {
             title: 'Physical security consulting and crisis planning for an education institution',
             location: 'United States',
-            lat: 38.7946,
-            lng: 106.5348,
+            lat: 41.809,
+            lng: -87.849,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667d6659f764d652f8720929_Physical-security-consulting-and-crisis-planning-for-an-education-institution-small.jpg',
             url: 'https://www.another-day.com/case-study/physical-security-consulting-and-crisis-planning-for-an-education-institution'
           },
           {
             title: 'Continuous threat intelligence and risk assessment for a wildlife NGO in Mozambique',
             location: 'Mozambique',
-            lat: 18.6657,
-            lng: 35.5296,
+            lat: -18.487,
+            lng: 34.853,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbbe2d057fd24e423aa_62f00bfdd19c8b99379f3cfb_mozambique-monitoring-S.jpeg',
             url: 'https://www.another-day.com/case-study/continuous-threat-intelligence-and-risk-assessment-for-a-wildlife-ngo-in-mozambique'
           },
@@ -182,8 +197,8 @@
           {
             title: 'Kidnap and security threat intelligence provision for multinational in Mexico',
             location: 'Mexico',
-            lat: 23.6345,
-            lng: 102.5528,
+            lat: 19.474,
+            lng: -99.187,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbfbc4ac16c4c3101c4_63c973d3d21d3d4f4a456ea2_Kidnap-and-security-threat-intelligence-provision-for-multinational-in-Mexico-Small.jpeg',
             url: 'https://www.another-day.com/case-study/kidnap-and-security-threat-intelligence-provision-for-multinational-in-mexico'
           },
@@ -198,8 +213,8 @@
           {
             title: 'Cyber insurance risk assessment for a local government authority',
             location: 'Australia',
-            lat: 25.2744,
-            lng: 133.7751,
+            lat: -27.421,
+            lng: 149.433,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667c2708b59c7e04e4a8da4f_Cyber-insurance-risk-assessment-for-a-local-government-authority-small.jpg',
             url: 'https://www.another-day.com/case-study/cyber-insurance-risk-assessment-for-a-local-government-authority'
           },
@@ -222,14 +237,17 @@
           {
             title: 'Cyber insurance risk assessment for a global satellite communications and launch provider',
             location: 'North America',
-            lat: 54.5260,
-            lng: 105.2551,
+            lat: 38.895,
+            lng: -77.078,
             image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbce9cbf0506b20c9e0_62f00aadd640657903c4e8fa_cyber-for-satellite-provider-S.jpeg',
             url: 'https://www.another-day.com/case-study/cyber-insurance-risk-assessment-for-a-global-satellite-communications-and-launch-provider'
           }
         ];
 
         const elem = document.getElementById('app');
+        
+        // Global variable to track hover state
+        let isHovering = false;
 
         const myGlobe = window.Globe()
         .backgroundColor('rgba(0,0,0,0)')
@@ -250,33 +268,98 @@
             pointer-events: auto;
           `;
 
+          el.addEventListener('click', () => {
+            window.open(d.url, '_blank'); // Open link in new tab
+          });
+
+
           el.onmouseover = () => {
+            // Set global hover state to true
+            isHovering = true;
+            
             const tooltip = document.createElement('div');
             tooltip.className = 'hover-text';
-            tooltip.innerHTML = `
-            <div style="display: flex; gap: 16px; align-items: start;">
-              <img src="${d.image}" alt="${d.title}" style="width: 30%; object-fit: cover;">
-              <div class="hover-text-rightcol">
-                <strong>${d.title}</strong>
-                ${d.location}
-              </div>
-            </div>
-            `;
-
+            tooltip.style.cursor = 'pointer'; // Add pointer cursor to tooltip
+            
+            // Create container first
+            const container = document.createElement('div');
+            container.className = 'hover-text-container';
+            
+            // Create and append image div
+            const imageDiv = document.createElement('div');
+            imageDiv.className = 'hover-text-image';
+            imageDiv.style.backgroundImage = `url('${d.image}')`;
+            container.appendChild(imageDiv);
+            
+            // Create and append text content
+            const textDiv = document.createElement('div');
+            textDiv.className = 'hover-text-rightcol';
+            textDiv.innerHTML = `<strong>${d.title}</strong><span class="hover-text-location">${d.location}</span>`;
+            container.appendChild(textDiv);
+            
+            // Add the container to the tooltip
+            tooltip.appendChild(container);
             
             const rect = el.getBoundingClientRect();
             tooltip.style.left = `${rect.right + 10}px`;
             tooltip.style.top = `${rect.top - 10}px`;
             
+            // Make the tooltip clickable
+            tooltip.addEventListener('click', () => {
+              window.open(d.url, '_blank'); // Open link in new tab
+            });
+            
+            // Prevent tooltip from closing when hovering over it
+            tooltip.addEventListener('mouseover', () => {
+              tooltip.dataset.hovered = 'true';
+              // Keep hover state true when hovering over tooltip
+              isHovering = true;
+            });
+            
+            tooltip.addEventListener('mouseout', (event) => {
+              // Check if mouse is moving back to the marker
+              if (event.relatedTarget === el || el.contains(event.relatedTarget)) {
+                return;
+              }
+              
+              tooltip.dataset.hovered = 'false';
+              setTimeout(() => {
+                if (!el.matches(':hover') && tooltip.dataset.hovered !== 'true') {
+                  tooltip.style.opacity = '0';
+                  tooltip.addEventListener('transitionend', () => tooltip.remove(), { once: true });
+                  // Reset hover state when leaving tooltip (if not hovering marker)
+                  isHovering = false;
+                }
+              }, 300); // Same delay
+            });
+            
             document.body.appendChild(tooltip);
             requestAnimationFrame(() => tooltip.style.opacity = '1');
           };
 
-          el.onmouseout = () => {
-            document.querySelectorAll('.hover-text').forEach(tooltip => {
-              tooltip.style.opacity = '0';
-              tooltip.addEventListener('transitionend', () => tooltip.remove());
-            });
+          el.onmouseout = (event) => {
+            // Check if the mouse is moving to the tooltip
+            const tooltips = document.querySelectorAll('.hover-text');
+            const relatedTarget = event.relatedTarget;
+            
+            // If mouse is moving to the tooltip or any of its children, don't remove it
+            if (Array.from(tooltips).some(tooltip => 
+                tooltip === relatedTarget || tooltip.contains(relatedTarget))) {
+              return;
+            }
+            
+            // Reset hover state if not moving to a tooltip
+            isHovering = false;
+            
+            setTimeout(() => {
+              document.querySelectorAll('.hover-text').forEach(tooltip => {
+                // Only remove if not being hovered
+                if (tooltip.dataset.hovered !== 'true') {
+                  tooltip.style.opacity = '0';
+                  tooltip.addEventListener('transitionend', () => tooltip.remove(), { once: true });
+                }
+              });
+            }, 300); // 300ms delay, can adjust as needed
           };
 
           return el;
@@ -291,14 +374,22 @@
 
         function animate() {
           frame = requestAnimationFrame(animate);
-          myGlobe.controls().autoRotate = true;
+          // Only auto-rotate if not hovering over a marker or tooltip
+          myGlobe.controls().autoRotate = !isHovering;
           myGlobe.controls().autoRotateSpeed = 0.2;
         }
 
         animate();
 
-        elem.addEventListener('mousedown', () => cancelAnimationFrame(frame));
-        elem.addEventListener('mouseup', () => animate());
+        elem.addEventListener('mousedown', () => {
+          cancelAnimationFrame(frame);
+          isHovering = true; // Prevent rotation during mouse drag
+        });
+        
+        elem.addEventListener('mouseup', () => {
+          animate();
+          isHovering = false; // Resume rotation after mouse drag
+        });
 
         window.addEventListener('resize', () => {
           myGlobe
@@ -307,8 +398,6 @@
         });
       });
     </script>
-
-    <script type="module" src="/src/main.js"></script>
 
   </body>
 </html>
