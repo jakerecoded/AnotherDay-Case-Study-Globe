@@ -67,8 +67,166 @@
       document.addEventListener('DOMContentLoaded', () => {
         
         const markers = [
-          { title: 'Cyber risk assessment for a global IT consultancy', location: 'London, UK', lat: 51.5074, lng: -0.1278, image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/66c5dd325ae804d24ccee9ea_Europe-Cyber.jpg' },
-          { title: 'Cyber risk assessment and insurance demystification for a major airline', location: 'Berlin, Germany', lat: 52.5200, lng: 13.4050, image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667d60a578a8e1ee796c1997_Investigation-to-locate-person-as-part-of-beneficiary-tracing.jpg' }
+          {
+            title: 'Asset trace to support freezing order application in financial fraud case',
+            location: 'Italy',
+            lat: 41.8719,
+            lng: 12.5674,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbb6667bc29bf8da8f7_61fa92bd008a883e63ba87d0_Asset-trace-to-support-freezing-order-application-in-financial-fraud-case-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/asset-trace-to-support-freezing-order-application-in-financial-fraud-case'
+          },
+          {
+            title: 'Private prosecution against a large corporate fraudster',
+            location: 'Middle East',
+            lat: 29.2985,
+            lng: 42.5510,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbfcbc3b7c3cd4a686d_61fa880b964cc85d77d65d50_Private-prosecution-against-a-large-corporate-fraudster-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/private-prosecution-against-a-large-corporate-fraudster'
+          },
+          {
+            title: 'International investigation to locate a missing beneficiary',
+            location: 'Los Angeles',
+            lat: 34.0549,
+            lng: 118.2426,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbe88264b213358afa5_6411d327a37710ae0ce659c4_International-investigation-to-locate-a-missing-beneficiary-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/international-investigation-to-locate-a-missing-beneficiary'
+          },
+          {
+            title: 'Evidential review in cryptocurrency fraud case',
+            location: 'United Kingdom',
+            lat: 51.5072,
+            lng: 0.1276,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667c1cc320028435da7ea977_Evidential-review-in-cryptocurrency-fraud-case-small.jpg',
+            url: 'https://www.another-day.com/case-study/evidential-review-in-cryptocurrency-fraud-case'
+          },
+          {
+            title: 'International human trafficking investigation',
+            location: 'Gulf states and South Asia',
+            lat: 23.8859,
+            lng: 45.0792,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbdb03b84b2cfd23009_61fa84c75c2c69414062e5c4_International-human-trafficking-investigation-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/international-human-trafficking-investigation'
+          },
+          {
+            title: 'Physical security support after a sophisticated criminal attack',
+            location: 'Spain',
+            lat: 40.4637,
+            lng: 3.7492,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667c1e5aa12465be6278a673_Physical-security-support-after-a-sophisticated-criminal-attack-small.jpg',
+            url: 'https://www.another-day.com/case-study/physical-security-support-after-a-sophisticated-criminal-attack'
+          },
+          {
+            title: 'Corporate governance and enterprise risk assessment for clinical life sciences',
+            location: 'United Kingdom',
+            lat: 55.3781,
+            lng: 3.4360,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbb443cd2f88486d65b_62f00cce3d1ceace6a259fe5_corporate-governance-risk-assessment-for-life-sciences-S.jpeg',
+            url: 'https://www.another-day.com/case-study/corporate-governance-enterprise-risk-assessment-for-clinical-life-sciences'
+          },
+          {
+            title: 'Political risk assessment for a global energy firm transitioning to renewables in Africa',
+            location: 'North Africa and West Africa',
+            lat: 13.5317,
+            lng: 2.4604,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbf637d39796dc0ff05_62f0083b06d8487eb2c9e793_political-risk-assessment-africa-S.jpeg',
+            url: 'https://www.another-day.com/case-study/political-risk-assessment-for-a-global-energy-firm-transitioning-to-renewables-in-africa'
+          },
+          {
+            title: 'Physical security consulting and crisis planning for an education institution',
+            location: 'United States',
+            lat: 38.7946,
+            lng: 106.5348,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667d6659f764d652f8720929_Physical-security-consulting-and-crisis-planning-for-an-education-institution-small.jpg',
+            url: 'https://www.another-day.com/case-study/physical-security-consulting-and-crisis-planning-for-an-education-institution'
+          },
+          {
+            title: 'Continuous threat intelligence and risk assessment for a wildlife NGO in Mozambique',
+            location: 'Mozambique',
+            lat: 18.6657,
+            lng: 35.5296,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbbe2d057fd24e423aa_62f00bfdd19c8b99379f3cfb_mozambique-monitoring-S.jpeg',
+            url: 'https://www.another-day.com/case-study/continuous-threat-intelligence-and-risk-assessment-for-a-wildlife-ngo-in-mozambique'
+          },
+          {
+            title: 'Tailored intelligence collection for a large multinational',
+            location: 'Global',
+            lat: 46.8182,
+            lng: 8.2275,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bc1a316081b88a2d121_61fa846e074e0b49834bf3b7_Tailored-intelligence-collection-for-a-large-multinational-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/tailored-intelligence-collection-for-a-large-multinational'
+          },
+          {
+            title: 'Real-time intelligence and strategic advisory before and during Russias invasion of Ukraine',
+            location: 'Ukraine',
+            lat: 48.3794,
+            lng: 31.1656,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbf9d91c64643b5fee5_62600c8886de9d6bccb8bc1f_Real-time-intelligence-Russias-invasion-of-Ukraine-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/real-time-intelligence-and-strategic-advisory-before-and-during-russias-invasion-of-ukraine'
+          },
+          {
+            title: 'Key Risk Indicator monitoring across Asia Pacific for an international bank',
+            location: 'East Asia',
+            lat: 4.2105,
+            lng: 101.9758,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbe9d91c65cb8b5fede_62f00dd6caeb35465eee6ce3_KRI-monitoring-for-global-bank-S.jpeg',
+            url: 'https://www.another-day.com/case-study/key-risk-indicator-monitoring-across-asia-pacific-for-an-international-bank'
+          },
+          {
+            title: 'Deep due diligence on a local supplier in a North African conflict zone',
+            location: 'North Africa',
+            lat: 26.3351,
+            lng: 17.2283,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/66c5b3f4f12558cb20cd03a2_north-africa-small.jpg',
+            url: 'https://www.another-day.com/case-study/deep-due-diligence-on-a-local-supplier-in-a-north-african-conflict-zone'
+          },
+          {
+            title: 'Kidnap and security threat intelligence provision for multinational in Mexico',
+            location: 'Mexico',
+            lat: 23.6345,
+            lng: 102.5528,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbfbc4ac16c4c3101c4_63c973d3d21d3d4f4a456ea2_Kidnap-and-security-threat-intelligence-provision-for-multinational-in-Mexico-Small.jpeg',
+            url: 'https://www.another-day.com/case-study/kidnap-and-security-threat-intelligence-provision-for-multinational-in-mexico'
+          },
+          {
+            title: 'Targeted investigation into pharmaceutical products being illegally diverted in the Middle East',
+            location: 'Iraq',
+            lat: 33.2232,
+            lng: 43.6793,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/643bdcc4599bb8224eecf077_Targeted-investigation-into-pharmaceutical-products-Small.jpg',
+            url: 'https://www.another-day.com/case-study/targeted-investigation-into-pharmaceutical-products-being-illegally-diverted-in-the-middle-east'
+          },
+          {
+            title: 'Cyber insurance risk assessment for a local government authority',
+            location: 'Australia',
+            lat: 25.2744,
+            lng: 133.7751,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667c2708b59c7e04e4a8da4f_Cyber-insurance-risk-assessment-for-a-local-government-authority-small.jpg',
+            url: 'https://www.another-day.com/case-study/cyber-insurance-risk-assessment-for-a-local-government-authority'
+          },
+          {
+            title: 'Cyber risk assessment and insurance demystification for a major airline',
+            location: 'Philippines',
+            lat: 12.8797,
+            lng: 121.7740,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/667d5f2aae9b7e3fea291dae_Cyber-risk-assessment-and-insurance-demystification-for-a-major-airline-small.jpg',
+            url: 'https://www.another-day.com/case-study/cyber-risk-assessment-and-insurance-demystification-for-a-major-airline'
+          },
+          {
+            title: 'Cyber risk assessment for a global IT consultancy',
+            location: 'Europe',
+            lat: 54.5260,
+            lng: 15.2551,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/66c5dd3302ae6057e8d44d83_Europe-Cyber-Small.jpg',
+            url: 'https://www.another-day.com/case-study/cyber-risk-assessment-for-a-global-it-consultancy'
+          },
+          {
+            title: 'Cyber insurance risk assessment for a global satellite communications and launch provider',
+            location: 'North America',
+            lat: 54.5260,
+            lng: 105.2551,
+            image: 'https://cdn.prod.website-files.com/642fe36d0866c92b27dc4f23/64314bbce9cbf0506b20c9e0_62f00aadd640657903c4e8fa_cyber-for-satellite-provider-S.jpeg',
+            url: 'https://www.another-day.com/case-study/cyber-insurance-risk-assessment-for-a-global-satellite-communications-and-launch-provider'
+          }
         ];
 
         const elem = document.getElementById('app');
